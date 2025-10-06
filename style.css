@@ -465,3 +465,34 @@ body {
   color: #fff;
   cursor: default; /* Không cho click chạy */
 }
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.buy-now-link {
+  background-color: #c40000;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.buy-now-link:hover {
+  background-color: #a00000;
+}
+
+.add-to-cart {
+  color: #c40000;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
+
