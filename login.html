@@ -79,8 +79,18 @@
         .getElementById("loginForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-          // Không kiểm tra mật khẩu, chỉ chuyển đến products.html
-          window.location.href = "products.html";
+
+          const email = document.querySelector('input[type="email"]').value;
+          const password = document.querySelector(
+            'input[type="password"]'
+          ).value;
+
+          // Giả lập thông tin đăng nhập
+          if (email === "phatt0404@gmail.com" && password === "Tanphat1609@") {
+            window.location.href = "products.html"; // Đăng nhập thành công
+          } else {
+            alert("Sai email hoặc mật khẩu!");
+          }
         });
     </script>
   </body>

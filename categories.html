@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loại Sản Phẩm</title>
+    <link rel="stylesheet" href="styleadmin.css" />
+  </head>
+
+  <body>
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+      <div class="logo">
+        <h2>Muit Store</h2>
+        <p>Hệ Thống Quản Lý</p>
+      </div>
+      <nav class="menu">
+        <a href="index.html" class="menu-item"><span>📊</span> Tổng quan</a>
+        <a href="customers.html" class="menu-item"
+          ><span>👥</span> Quản Lý Khách Hàng</a
+        >
+        <a href="categories.html" class="menu-item active"
+          ><span>📂</span> Loại Sản Phẩm</a
+        >
+        <a href="productsadmin.html" class="menu-item"
+          ><span>💻</span> Danh Mục Sản Phẩm</a
+        >
+        <a href="import.html" class="menu-item"
+          ><span>🚚</span> Quản Lý Nhập Hàng</a
+        >
+        <a href="price.html" class="menu-item"
+          ><span>🏷️</span> Quản Lý Giá Bán</a
+        >
+        <a href="orders.html" class="menu-item"
+          ><span>🛒</span> Quản Lý Đơn Hàng</a
+        >
+        <a href="inventory.html" class="menu-item"
+          ><span>📦</span> Quản Lý Tồn Kho</a
+        >
+      </nav>
+    </div>
+
+    <div class="main-content">
+      <div class="top-bar">
+        <h1>Loại sản phẩm</h1>
+        <div class="info">
+          <img src="logo.png" alt="Admin" />
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <div class="title">
+            <h3>Quản lý loại sản phẩm</h3>
+            <a href="#popupForm" class="head">+ Thêm loại sản phẩm</a>
+          </div>
+
+          <div class="search" style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="🔍 Tìm kiếm theo Mã loại hoặc Tên loại..."
+            />
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Mã loại</th>
+                <th>Loại sản phẩm</th>
+                <th>Số lượng sản phẩm</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#A001</td>
+                <td>Laptop Gaming</td>
+                <td>32</td>
+                <td>
+                  <a href="#popupForm" class="sua">Sửa</a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#A002</td>
+                <td>Laptop Văn Phòng</td>
+                <td>26</td>
+                <td>
+                  <a href="#popupForm" class="sua">Sửa</a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#A003</td>
+                <td>Phụ kiện loại 1</td>
+                <td>10</td>
+                <td>
+                  <a href="#popupForm" class="sua">Sửa</a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#A004</td>
+                <td>Laptop Đồ Họa</td>
+                <td>18</td>
+                <td>
+                  <a href="#popupForm" class="sua">Sửa</a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupForm" class="popup-overlay">
+      <div class="popup">
+        <a href="#" class="close-btn">✖</a>
+        <h3 style="color: #dc2626; margin-bottom: 10px">
+          Thêm / Sửa Loại Sản Phẩm
+        </h3>
+
+        <form>
+          <label for="maLoai">Mã loại:</label>
+          <input
+            type="text"
+            id="maLoai"
+            class="input-field"
+            placeholder="Nhập mã loại..."
+          />
+
+          <label for="tenLoai">Tên loại sản phẩm:</label>
+          <input
+            type="text"
+            id="tenLoai"
+            class="input-field"
+            placeholder="Nhập tên loại..."
+          />
+
+          <label for="soLuong">Số lượng sản phẩm:</label>
+          <input
+            type="number"
+            id="soLuong"
+            class="input-field"
+            placeholder="Nhập số lượng..."
+          />
+
+          <button type="submit" class="btn-save">Lưu thông tin</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

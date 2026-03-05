@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Mục Sản Phẩm</title>
+    <link rel="stylesheet" href="styleadmin.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="logo">
+        <h2>Muit Store</h2>
+        <p>Hệ Thống Quản Lý</p>
+      </div>
+      <nav class="menu">
+        <a href="index.html" class="menu-item"><span>📊</span> Tổng quan</a>
+        <a href="customers.html" class="menu-item"
+          ><span>👥</span> Quản Lý Khách Hàng</a
+        >
+        <a href="categories.html" class="menu-item"
+          ><span>📂</span> Loại Sản Phẩm</a
+        >
+        <a href="productsadmin.html" class="menu-item active"
+          ><span>💻</span> Danh Mục Sản Phẩm</a
+        >
+        <a href="import.html" class="menu-item"
+          ><span>🚚</span> Quản Lý Nhập Hàng</a
+        >
+        <a href="price.html" class="menu-item"
+          ><span>🏷️</span> Quản Lý Giá Bán</a
+        >
+        <a href="orders.html" class="menu-item"
+          ><span>🛒</span> Quản Lý Đơn Hàng</a
+        >
+        <a href="inventory.html" class="menu-item"
+          ><span>📦</span> Quản Lý Tồn Kho</a
+        >
+      </nav>
+    </div>
+
+    <div class="main-content">
+      <div class="top-bar">
+        <h1>Danh mục sản phẩm</h1>
+        <div class="info">
+          <img src="logo.png" alt="Admin" />
+          <span>Admin</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <div class="title">
+            <h3>Quản lý loại sản phẩm</h3>
+            <a href="#popup-them" class="head">+ Thêm loại sản phẩm</a>
+          </div>
+
+          <div class="search" style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="🔍 Tìm kiếm theo Mã loại hoặc Tên loại..."
+            />
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Mã sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Loại</th>
+                <th>Mô tả</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SP001</td>
+                <td><img src="sp1.jpg" alt="" /></td>
+                <td>Laptop HP 240 G9</td>
+                <td>Văn phòng</td>
+                <td>Core i5, SSD 512GB, RAM 8GB</td>
+                <td>
+                  <a href="#popup-sua-1"><button class="sua">Sửa</button></a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SP002</td>
+                <td><img src="sp2.jpg" alt="" /></td>
+                <td>MacBook Air M2</td>
+                <td>Mỏng nhẹ</td>
+                <td>M2, 256GB, 8GB RAM</td>
+                <td>
+                  <a href="#popup-sua-2"><button class="sua">Sửa</button></a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SP003</td>
+                <td><img src="sp3.jpg" alt="" /></td>
+                <td>ASUS ROG Strix</td>
+                <td>Gaming</td>
+                <td>RTX 4070, Ryzen 9</td>
+                <td>
+                  <a href="#popup-sua-3"><button class="sua">Sửa</button></a>
+                  <button class="xoa">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-them" class="popup-overlay">
+      <div class="popup">
+        <a href="#" class="close-btn">✖</a>
+        <h2>Thêm sản phẩm</h2>
+
+        <h3>Loại sản phẩm</h3>
+        <select class="input-field">
+          <option>--Chọn loại--</option>
+          <option>Gaming</option>
+          <option>Văn phòng</option>
+          <option>Mỏng nhẹ</option>
+          <option>Đồ họa-Kỹ thuật</option>
+        </select>
+
+        <h3>Mã sản phẩm</h3>
+        <input type="text" class="input-field" placeholder="Nhập mã sản phẩm" />
+
+        <h3>Tên sản phẩm</h3>
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Nhập tên sản phẩm"
+        />
+
+        <h3>Hình ảnh</h3>
+        <label for="upload-add" class="upload_box">+</label>
+        <input type="file" id="upload-add" style="display: none" />
+
+        <h3>Mô tả</h3>
+        <textarea
+          rows="4"
+          class="input-field"
+          placeholder="Thêm mô tả sản phẩm"
+        ></textarea>
+
+        <div class="button_box">
+          <button class="luu">Thêm sản phẩm</button>
+          <a href="#"><button class="xoa">Hủy</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-sua-1" class="popup-overlay">
+      <div class="popup">
+        <a href="#" class="close-btn">✖</a>
+        <h2>Sửa sản phẩm</h2>
+
+        <h3>Mã sản phẩm</h3>
+        <input type="text" class="input-field" value="#SP001" readonly />
+
+        <h3>Tên sản phẩm</h3>
+        <input type="text" class="input-field" value="Laptop HP 240 G9" />
+
+        <h3>Loại</h3>
+        <select class="input-field">
+          <option>Văn phòng</option>
+          <option>Gaming</option>
+          <option>Mỏng nhẹ</option>
+          <option>Đồ họa-Kỹ thuật</option>
+        </select>
+
+        <h3>Mô tả</h3>
+        <textarea rows="4" class="input-field">
+Core i5, SSD 512GB, RAM 8GB</textarea
+        >
+
+        <div class="button_box">
+          <button class="luu">Lưu thay đổi</button>
+          <a href="#"><button class="xoa">Hủy</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-sua-2" class="popup-overlay">
+      <div class="popup">
+        <a href="#" class="close-btn">✖</a>
+        <h2>Sửa sản phẩm</h2>
+
+        <h3>Mã sản phẩm</h3>
+        <input type="text" class="input-field" value="#SP002" readonly />
+
+        <h3>Tên sản phẩm</h3>
+        <input type="text" class="input-field" value="MacBook Air M2" />
+
+        <h3>Loại</h3>
+        <select class="input-field">
+          <option>Mỏng nhẹ</option>
+          <option>Văn phòng</option>
+          <option>Gaming</option>
+          <option>Đồ họa-Kỹ thuật</option>
+        </select>
+
+        <h3>Mô tả</h3>
+        <textarea rows="4" class="input-field">M2, 256GB, 8GB RAM</textarea>
+
+        <div class="button_box">
+          <button class="luu">Lưu thay đổi</button>
+          <a href="#"><button class="xoa">Hủy</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-sua-3" class="popup-overlay">
+      <div class="popup">
+        <a href="#" class="close-btn">✖</a>
+        <h2>Sửa sản phẩm</h2>
+
+        <h3>Mã sản phẩm</h3>
+        <input type="text" class="input-field" value="#SP003" readonly />
+
+        <h3>Tên sản phẩm</h3>
+        <input type="text" class="input-field" value="ASUS ROG Strix" />
+
+        <h3>Loại</h3>
+        <select class="input-field">
+          <option>Gaming</option>
+          <option>Văn phòng</option>
+          <option>Mỏng nhẹ</option>
+          <option>Đồ họa-Kỹ thuật</option>
+        </select>
+
+        <h3>Mô tả</h3>
+        <textarea rows="4" class="input-field">RTX 4070, Ryzen 9</textarea>
+
+        <div class="button_box">
+          <button class="luu">Lưu thay đổi</button>
+          <a href="#"><button class="xoa">Hủy</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
